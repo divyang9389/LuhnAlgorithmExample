@@ -1,0 +1,12 @@
+<h1>Velidate Credit card</h1>
+<div>
+	<% if flash %>
+	<%= flash[:notice] %>
+	<% end %>
+	<%= form_tag(:home_validate_credit_card, method: :post) do %>
+		<%= label :credit_card, 'Credit Card Number' %>
+		<%= text_field_tag :credit_card %>
+
+		<%= submit_tag 'Submit' %>
+	<% end %>
+</div>
